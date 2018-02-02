@@ -4,5 +4,8 @@
   "description": "Discord Bot",
   "main": "index.js",
   "author": "Stephanie Fay",
-  "dependencies": {}
+  "dependencies": {
+    "discord.js": "^11.3.0",
+    "tumblr.js": "^1.1.1"
+  }
 }

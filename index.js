@@ -5,10 +5,9 @@
 // Import the discord.js module
 const Discord = require('discord.js');
 const config = require('./config.json');
-
+const tumblr = require('tumblr.js');
 // Create an instance of a Discord client
 const client = new Discord.Client();
-
 // The ready event is vital, it means that your bot will only start reacting to information
 // from Discord _after_ ready is emitted
 client.on('ready', () => {
@@ -27,7 +26,7 @@ client.on("message", async message => {
   var m = message.content;
   m = m.toLowerCase();
 
-  if(m.includes("hórus") || m.includes("horus")) {
+  if(m.includes("hórus") || m.includes("horus") || m.includes("h o r u s") || m.includes("h ó r u s")) {
   	console.log(message.author.username + ": " + m);
   	message.delete().catch(O_o=>{});
   	message.channel.send("Essa mensagem foi excluída pelos poderes de Ernasis/Lisnar/Armenian/Deus Doce/Sieghart/Teffy (você escolhe), porque Hórus é um putão.");
@@ -36,6 +35,21 @@ client.on("message", async message => {
   	await channel.send(`SHAME: ${message.author.tag}, afinal fica citando Hórus-o-putão`);
 
   	return;
+  }
+
+  if (m.includes("lupus")) {
+
+    message.channel.send({embed: {
+                                    color: 0x0008ff,
+                                    title: "Você quis dizer Lúpus?",
+                                    url: "https://www.google.com.br/search?q=l%C3%BApus&rlz=1C1GGRV_enBR751BR751&oq=l%C3%BApus&aqs=chrome.0.0l6.1029j0j7&sourceid=chrome&ie=UTF-8"
+                          }
+    });
+
+  }
+
+  if(m.includes("satã") || m.includes("satanás") || m.includes("cazeaje")) {
+      message.channel.send("```O sangue de Ernasis tem poder, tem poder, tem poder\nO sangue de Ernasis tem poder, faz o inferno estremecer\nFaz Cazeaje correr e o milagre acontecer```");
   }
 
   
@@ -95,6 +109,13 @@ if (command === 'watching') {
 	    	});
 	    }
 	}
+
+  if (command === 'call') {
+    message.delete().catch(O_o=>{});
+    message.channel.send('@everyone vem pra call desgraçados ●ヽ(ﾟ∀ﾟ)ﾉ●');
+
+  }
+
 });
 
 
