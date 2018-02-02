@@ -2,6 +2,7 @@
 
 The proposal of this Bot is just to learn new things and spend my free time in something useful.
 
+
 | References:                                                                       |                  |
 |-----------------------------------------------------------------------------------|------------------|
 | https://discord.js.org/#/                                                         | Discord.js       |
