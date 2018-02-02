@@ -1,0 +1,8 @@
+{
+  "name": "GodBot",
+  "version": "1.0.0",
+  "description": "Discord Bot",
+  "main": "index.js",
+  "author": "Stephanie Fay",
+  "dependencies": {}
+}
